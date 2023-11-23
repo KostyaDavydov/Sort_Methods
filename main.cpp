@@ -93,6 +93,9 @@ int main()
 		std::cout << "\nChoose sort method:\n";
 		std::cout << "1 - Bubble sort\n";
 		std::cout << "2 - Insertion sort\n";
+		std::cout << "3 - Selection sort\n";
+		std::cout << "4 - Quick sort\n";
+		std::cout << "5 - Merge sort\n";
 
 		std::cout << "\n-> ";
 		std::cin >> choice;
@@ -110,6 +113,27 @@ int main()
 			{
 				start_time = clock();
 				insertionSort(ar);
+				end_time = clock();
+				break;
+			}
+			case 3:
+			{
+				start_time = clock();
+				selectionSort(ar);
+				end_time = clock();
+				break;
+			}
+			case 4:
+			{
+				start_time = clock();
+				quickSort(ar);
+				end_time = clock();
+				break;
+			}
+			case 5:
+			{
+				start_time = clock();
+				mergeSort(ar, false);
 				end_time = clock();
 				break;
 			}
@@ -131,3 +155,5 @@ int main()
 
 	return 0;
 }
+
+
